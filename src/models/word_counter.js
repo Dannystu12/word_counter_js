@@ -3,8 +3,8 @@ const PubSub = require('../helpers/pub_sub.js');
 const WordCounter = function() {};
 
 WordCounter.prototype.countWords = function (string) {
-  const result = string.split(" ").filter((word) => word != '');
-  return result.length;.
+  const result = string.split(/\s+/).filter((word) => word != '');
+  return result.length;
 };
 
 WordCounter.prototype.bindEvents  = function() {
